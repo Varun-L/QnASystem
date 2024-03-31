@@ -1,0 +1,49 @@
+Built with LangChain, Streamlit, HuggingFace
+
+This is a Python application that allows you to load a PDF and ask questions about it using natural language. The application uses a LLM to generate a response about your PDF. The LLM will not answer questions unrelated to the document.
+
+## How it works
+
+The application reads the PDF and splits the text into smaller chunks that can be then fed into a LLM. It uses Instructor embeddings to create vector representations of the chunks. The application then finds the chunks that are semantically similar to the question that the user asked and feeds those chunks to the LLM to generate a response.
+
+The application uses Streamlit to create the GUI and Langchain to deal with the LLM.
+
+
+## Installation
+
+To install the repository, please clone this repository and install the requirements:
+
+```
+pip install -r requirements.txt
+```
+
+You will also need to add your HuggingFace API key to the `.env` file.
+
+## Usage
+
+To use the application, run the `main.py` file with the streamlit CLI (after having installed streamlit): 
+
+```
+streamlit run app.py
+```
+
+
+## Contributing
+
+This repository is for educational purposes only and is not intended to receive further contributions.
+
+
+
+   21  python -m venv st
+   23  source st/bin/activate
+   24  pip list
+   25  pip install -r requirements.txt
+   13  which streamlit
+   14  which python
+   26  streamlit
+   28  pip install InstructorEmbedding
+   30  pip install sentence_transformers
+   29  streamlit run app.py 
+   32  pip uninstall sentence-transformers
+   33  pip install sentence_transformers==2.2.2
+   43  export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
